@@ -1,14 +1,14 @@
 ---
 applications:
-- name: mywordpress
+- name: wp10
   memory: 128M 
   path: .
   buildpack: https://github.com/cloudfoundry/php-buildpack
-  host: wordpress-on
+  host: wp10
   services:
   - mysql-db
   env:
-    SSH_HOST: user@your-ssh-server
-    SSH_PATH: /full/or/relative/path/on/ssh/server
+    SSH_HOST: cpadmusr@160.153.90.232
+    SSH_PATH: /home/cpadmusr/sshfs
     SSH_KEY_NAME: sshfs_rsa
     SSH_OPTS: '["cache=yes", "kernel_cache", "compression=no", "large_read"]'
